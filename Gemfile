@@ -5,6 +5,9 @@ ruby '2.5.1'
 
 # Testes do app
 gem 'rspec-rails', '~> 3.5'
+# Offline tests
+gem 'rest-client'
+gem 'webmock'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
