@@ -1,6 +1,7 @@
 $(document).ready ->
 
-  $('form').submit ->
+
+  $('form').keyup  ->
     if $('form').attr('action') == '/convert'
       $.ajax '/convert',
           type: 'GET'
@@ -15,3 +16,14 @@ $(document).ready ->
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
         return false;
+
+  $('button').click ->
+    $('#result').val($('#source_currency').val()) # We need a third var to do the trick, and 'result' will change after this function, so we use it
+    $('#source_currency').val($('#target_currency').val())
+    $('#target_currency').val($('#result').val())
+    $('#result').val('')
+    $('form').trigger('keyup')
+
+  $('form').change  ->
+    $('form').trigger('keyup')
+
