@@ -13,10 +13,15 @@
             <%= select_tag 'source_currency', options_for_select(currency_list, 'USD'), class: 'form-control', id: 'source_currency' %>
           </div>
 
+          <div>
+              <button type='button' id='botao1' class='btn btn-primary btn-exchange col-md-4' ></button>
+          </div>
+
           <div class='form-group'>
             <input type='number' name='amount' id='amount' class='form-control' placeholder='Quantidade ($10)' step='any' required>
           </div>
         </div>
+
 
         <div class='destination_currency'>
           <div class='form-group'>
@@ -27,9 +32,6 @@
             <input type='text' id='result' name='result' class='form-control' placeholder='Resultado' readonly>
           </div>
         </div>
-        <div>
-          <button type='button' id='botao1' class='btn btn-primary btn-exchange col-md-12' >Inverter</button>
-        <div>
 <!--
         <div>
           <button type='submit' class='btn btn-primary btn-exchange col-md-12'>CONVERTER</button>

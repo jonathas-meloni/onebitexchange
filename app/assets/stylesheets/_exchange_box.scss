@@ -4,7 +4,7 @@
     border: 0;
 
     .card-header{
-      background-color: #878d99;
+      background-color: #3366cc;
       border-radius: 0;
       color: white;
       font-weight: 700;
@@ -15,14 +15,24 @@
       padding: 20px;
 
       .title{
-        color: #878d99;
+        color: #3366cc;
         font-weight: 700;
+
       }
 
+      #amount {
+        width: 80%;
+      }
+
+
+
       .btn-exchange{
-        background-color: #5bc0de;
-        border-color: #5bc0de;
+        background: image-url("/inverter.jpg") no-repeat;
+        border-color: #ffffff;
         border-radius: 0;
+        width: 20%;
+        height: 35px;
+        float: right;
       }
     }
   }
@@ -36,9 +46,10 @@
   .title{
     margin-top: 30px;
     font-size: 20px;
-  }
+    }
 
   .form-group {
+
     select {
       font-size: 20px;
       height: 50px !important;
