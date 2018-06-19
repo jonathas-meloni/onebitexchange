@@ -15,6 +15,7 @@ $(document).ready ->
             alert textStatus
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
+            $('#bitcoin').val(data.valuebit)
         return false;
 
   $('button').click ->

@@ -16,8 +16,17 @@ class ExchangeService
       url = "#{exchange_api_url}?token=#{exchange_api_key}&currency=#{@source_currency}/#{@target_currency}"
       res = RestClient.get url
       value = JSON.parse(res.body)['currency'][0]['value'].to_f
-
       value * @amount
+    rescue RestClient::ExceptionWithResponse => e
+      e.response
+    end
+  end
+  def execute
+    begin
+      url = "https://blockchain.info/tobtc?currency=#{@source_currency}&value=#{@amount}"
+      res = RestClient.get url
+      valuebit = JSON.parse(res.body).to_f
+      valuebit
     rescue RestClient::ExceptionWithResponse => e
       e.response
     end
